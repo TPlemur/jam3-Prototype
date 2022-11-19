@@ -89,8 +89,13 @@ function onPress(eWiz,sWiz,bWiz,mon){
     playerdef *= playerBoost;
     monatk *= monBoost;
     mondef *= monBoost;
-    console.log("player damage: " + String(monatk - playerdef))
-    console.log("monster damage: " + String(playeratk - mondef))
+    mondam = playeratk - mondef;
+    playerdam = monatk - playerdef;
+    if(mondam < 0){mondam = 0;}
+    if(playerdam < 0){playerdam = 0;}
+
+    console.log("player damage: " + playerdam)
+    console.log("monster damage: " + mondam)
     mon.randomize();
 }
 
