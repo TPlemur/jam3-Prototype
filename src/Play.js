@@ -22,7 +22,7 @@ class Play extends Phaser.Scene{
     create(){
         var elementOps = ['fire', 'water', 'earth'];
         var secondOps = ['beam','shield'];
-        var thirdOps = ['buff atk','buff def'];
+        var thirdOps = ['buffAtk','buffDef'];
 
         //tracked things
         this.theMon = new monster;
@@ -62,8 +62,8 @@ function onPress(eWiz,sWiz,bWiz,mon){
     else{playerdef = 5;}
     if(mon.position == 'offensive'){monatk = 6;}
     else{mondef=5}
-    if(     mon.buff == 'buff atk'){playeratk +=1}
-    else if(mon.buff == 'buff def'){playerdef +=1}
+    if(     mon.buff == 'buffAtk'){playeratk +=1}
+    else if(mon.buff == 'buffDef'){playerdef +=1}
     else{console.log('no buff')}
     mon.buff = bWiz.children[2].text;
 
