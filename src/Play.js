@@ -40,8 +40,6 @@ class Play extends Phaser.Scene{
         
         this.launchBtn = this.add.sprite(screenWidth/2, screenHeight-100, 'launchButton').setInteractive().setScale(0.4); //Initialize the button
         this.launchBtn.on('pointerdown', ()=>onPress(this.firstWiz,this.secondWiz,this.thirdWiz,this.theMon));   
-
-        console.log(this.firstWiz.children[2].text);
     }
 
     update(){
